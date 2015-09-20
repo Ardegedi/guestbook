@@ -34,6 +34,12 @@ class PostController extends Controller {
 		return view('post.index', ['posts' => $posts]);
 	}
 
+	public function getPostById(Post $postById)
+	{
+		$post = $postById;
+		return view('post.details', ['post' => $post]);
+	}
+
 	/**
 	 * Show the form for creating a new resource.
 	 *

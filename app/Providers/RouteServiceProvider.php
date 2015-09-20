@@ -23,8 +23,8 @@ class RouteServiceProvider extends ServiceProvider {
 	public function boot(Router $router)
 	{
 		parent::boot($router);
-
-		//
+		//Передаём id поста в роуте post/post_details/{post_id}
+		$router->model('post_id','App\Models\Post');
 	}
 
 	/**

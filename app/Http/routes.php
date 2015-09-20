@@ -87,5 +87,7 @@ Route::get('story/{author}/{theme}/{ver?}', function($author,  $theme, $ver='1.0
 
 
 //По урокам Афанасьева
+
 Route::get('post', ['as'=>'post', 'uses'=>'PostController@index']);
-Route::get('unpublished', ['as'=>'post.unpublished', 'uses'=>'PostController@unpublished']);
+Route::get('post/post_details/{post_id}', ['as'=>'post_details', 'uses'=>'PostController@getPostById']);
+Route::get('post/unpublished', ['as'=>'post.unpublished', 'uses'=>'PostController@unpublished']);
